@@ -1,0 +1,28 @@
+.right-navbar {
+    margin-left: auto;
+    
+}
+.text-card-right {
+    position: relative;
+    display: inline-block;
+    bottom: 0.5rem;
+   
+}
+.recipe-button{
+    margin-right: 0.5rem;
+    
+}
+.plus-icon{
+    position:fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: dodgerblue
+}
+.alert-message {
+    position:fixed;
+    right: 1rem;
+    z-index: 999;
+    text-transform: capitalize;
+}

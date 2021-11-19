@@ -1,0 +1,56 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "chienho2",
+    "password": "chienho"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "chienho1",
+    "password": "chienho"
+}
+###
+POST http://localhost:5000/api/recipe
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY1OGZhMDEyYzAwZWYwMmU4MGUxNWUiLCJpYXQiOjE2MzQxMjg0NjF9.qXl1vLo-sLvkARjczNxX9wzPzFG5SG5frb0BKBvFTHk
+
+{
+    "name": "suonxaochuangot",
+    "description": "suon,ca chua, toi bam, nuoc mam, duong, ot, tieu, nuoc",
+    "url": "https://www.youtube.com/watch?v=gHCoG3nNf3A"
+}
+###
+GET  http://localhost:5000/api/auth
+Content-Type: application/json
+Authorization: Bearer fasdasd
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "chien",
+    "password": "chien"
+}
+###
+GET http://localhost:5000/api/recipes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY5NGUzMDE3YjQxZDQ4MDUxOGRjYWIiLCJpYXQiOjE2MzcyMTQzOTV9.nCj3wFJxhH4_Ec_ubL3IiTErQLQ_OIErnT8enxQi98M
+###
+DELETE http://localhost:5000/api/recipes/6194bf5c74684b4bb4dc4441
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY5NGUzMDE3YjQxZDQ4MDUxOGRjYWIiLCJpYXQiOjE2MzcyMTQzOTV9.nCj3wFJxhH4_Ec_ubL3IiTErQLQ_OIErnT8enxQi98M
+###
+PUT http://localhost:5000/api/recipes/6194bf5c74684b4bb4dc4441
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY5NGUzMDE3YjQxZDQ4MDUxOGRjYWIiLCJpYXQiOjE2MzcyMTQzOTV9.nCj3wFJxhH4_Ec_ubL3IiTErQLQ_OIErnT8enxQi98M
+Content-Type: application/json
+
+{
+    "name":"beef",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra dapibus ultricies. Nunc ullamcorper in leo sed interdum. Nam non.",
+    "url": "http://https://www.youtube.com/watch?v=Cyskqnp1j64&ab_channel=GordonRamsay",
+    "status": "LEARNING"
+}
+
