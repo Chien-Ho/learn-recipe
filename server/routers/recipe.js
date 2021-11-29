@@ -70,13 +70,13 @@ router.put('/:id', verifyToken, async (req, res) => {
             url: url.startsWith('http://') ? url : `http://${url}`,
             status: status || 'TO COOK'
         }
-        const updateRecipeCondition = { id: req.params._id, user: req.userId }
-        newPost = await Recipe.findOneAndUpdate(
+        const updateRecipeCondition = { _id: req.params.id, user: req.userId }
+        newRecipe = await Recipe.findOneAndUpdate(
             updateRecipeCondition,
             newRecipe,
             { new: true }
         )
-        if (!newPost)
+        if (!newRecipe)
             return res.status(401).json({
                 success: false,
                 message: 'cập nhật Recipe không thành công'
@@ -87,7 +87,7 @@ router.put('/:id', verifyToken, async (req, res) => {
             newRecipe
         })
     } catch (error) {
-        console.log(error.message);
+
         return res.status(400).json({
             success: false,
             message: 'server sập'
@@ -102,17 +102,17 @@ router.delete('/:id', verifyToken, async (req, res) => {
         if (!deleteRecipe)
             return res.status(401).json({
                 success: false,
-                message: 'xoa recipe khong thanh cong'
+                message: 'Xoá Recipe không thành công'
             })
         res.json({
             success: true,
-            message: 'xoa recipe thanh cong'
+            message: 'Xoá Recipe thành công'
         })
     } catch (error) {
         console.log(error.message);
         return res.status(400).json({
             success: false,
-            message: 'server sap'
+            message: 'server sập'
         })
     }
 

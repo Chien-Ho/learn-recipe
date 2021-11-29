@@ -17,15 +17,16 @@ const LoginUser = () => {
         event.preventDefault()
         try {
             const loginData = await login(loginForm)
-            console.log(loginData);
-            const { message, success } = loginData
-            setAlert({ type: 'danger', message: loginData.message })
-            setTimeout(() => {
-                setAlert(null)
-            }, 2000);
-            console.log(loginData);
+            if (!loginData.success) {
+                const { message, success } = loginData
+                setAlert({ type: 'danger', message: loginData.message })
+                setTimeout(() => {
+                    setAlert(null)
+                }, 2000);
+            }
+
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
 
     }
@@ -37,7 +38,7 @@ const LoginUser = () => {
     }
     return (
         <>
-            <Form onSubmit={submitForm} >
+            <Form className="my-5" onSubmit={submitForm} >
                 <AlertMessage info={alert} />
                 <FormGroup>
                     <Input type="text" name="username"
@@ -54,10 +55,10 @@ const LoginUser = () => {
                         value={password}
                         onChange={handleChange} />
                 </FormGroup>
-                <Button  >Login</Button>
-                <p>ban chua co tai khoan ?</p>
+                <Button color="light" type="submit" className="my-2">Login</Button>
+                <p>Bạn chưa có tài khoản ?</p>
                 <Link to='/register'>
-                    <Button>Register</Button>
+                    <Button color="info">Register</Button>
                 </Link>
             </Form>
         </>

@@ -64,10 +64,10 @@ const RegisterUser = () => {
                         required
                         value={confirmPassword} />
                 </FormGroup>
-                <Button>Register</Button>
-                <p>ban da co tai khoan ?</p>
+                <Button color="light" type="submit" className="my-2">Register</Button>
+                <p>Bạn đã có tài khoản ?</p>
                 <Link to='/login'>
-                    <Button>Login</Button>
+                    <Button color="success">Login</Button>
                 </Link>
             </Form>
         </div>

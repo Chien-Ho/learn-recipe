@@ -1,3 +1,29 @@
+.auth-container {
+    position: relative;
+    background: url(./assets//backgroundLogin.jpg) no-repeat center center/cover;
+    height: 100vh;
+}
+.auth-header {
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 100%;
+}
+.auth-tittle {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.auth-tittle {
+    width: 50%;
+}
+.auth-tittle h1,
+.auth-tittle h4,
+.auth-tittle p {
+	color: white;
+}
 .right-navbar {
     margin-left: auto;
     

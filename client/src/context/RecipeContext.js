@@ -47,7 +47,7 @@ const RecipeContextProvider = ({ children }) => {
             return response.data
 
         } catch (error) {
-            const { message, success } = error.response
+            const { message, success } = error.response.data
             setAlert({ type: 'danger', message: message })
             setTimeout(() => {
                 setAlert(null)
@@ -64,7 +64,7 @@ const RecipeContextProvider = ({ children }) => {
         })
     }
     const updateRecipe = async updatedRecipe => {
-
+        console.log(updatedRecipe);
         try {
             const response = await axios.put(`${apiUrl}/recipes/${updatedRecipe._id}`, updatedRecipe)
 
@@ -81,8 +81,8 @@ const RecipeContextProvider = ({ children }) => {
             }
 
         } catch (error) {
-            const { message, success } = error.response
-            setAlert({ type: 'success', message: message })
+            const { message, success } = error.response.data
+            setAlert({ type: 'danger', message: message })
             setTimeout(() => {
                 setAlert(null)
             }, 5000);
@@ -102,12 +102,18 @@ const RecipeContextProvider = ({ children }) => {
                     payload: recipeId
                 })
             }
-            const { message, success } = this.response.data.success
+            console.log(response);
+            const { message, success } = response.data
             setAlert({ type: 'success', message: message })
             setTimeout(() => {
                 setAlert(null)
             }, 5000);
         } catch (error) {
+            const { message, success } = error.response.data
+            setAlert({ type: 'danger', message: message })
+            setTimeout(() => {
+                setAlert(null)
+            }, 5000);
             console.log(error.response);
         }
     }

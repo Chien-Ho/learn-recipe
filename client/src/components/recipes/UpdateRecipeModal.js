@@ -24,8 +24,9 @@ const UpdateRecipeModal = () => {
     }
     const onSubmit = async (e) => {
         e.preventDefault()
+        
         const response = await updateRecipe(updatedRecipe)
-        console.log(response);
+
         setShowUpdateRecipeModal(false)
     }
 

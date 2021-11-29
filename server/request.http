@@ -43,13 +43,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY5N
 DELETE http://localhost:5000/api/recipes/6194bf5c74684b4bb4dc4441
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY5NGUzMDE3YjQxZDQ4MDUxOGRjYWIiLCJpYXQiOjE2MzcyMTQzOTV9.nCj3wFJxhH4_Ec_ubL3IiTErQLQ_OIErnT8enxQi98M
 ###
-PUT http://localhost:5000/api/recipes/6194bf5c74684b4bb4dc4441
+PUT http://localhost:5000/api/recipes/619781f7e521b6f5863b41e3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTY5NGUzMDE3YjQxZDQ4MDUxOGRjYWIiLCJpYXQiOjE2MzcyMTQzOTV9.nCj3wFJxhH4_Ec_ubL3IiTErQLQ_OIErnT8enxQi98M
 Content-Type: application/json
 
 {
-    "name":"beef",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra dapibus ultricies. Nunc ullamcorper in leo sed interdum. Nam non.",
+    "name":"bedádsádsaadef",
+    "description":"Ládasr sit amet, consectetur adipiscing elit. Sed viverra dapibus ultricies. Nunc ullamcorper in leo sed interdum. Nam non.",
     "url": "http://https://www.youtube.com/watch?v=Cyskqnp1j64&ab_channel=GordonRamsay",
     "status": "LEARNING"
 }
